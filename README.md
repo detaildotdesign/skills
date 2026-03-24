@@ -1,6 +1,6 @@
 # Interface Details Skill
 
-A [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code) that helps developers bring crafted micro-interactions, polish, and thoughtful details to their interfaces — based on 100+ real-world examples curated on [detail.design](https://detail.design).
+A skill that helps developers bring crafted micro-interactions, polish, and thoughtful details to their interfaces — based on 100+ real-world examples curated on [detail.design](https://detail.design).
 
 ## What this skill does
 
@@ -20,15 +20,9 @@ It covers:
 - **Content & Intelligence** — smart defaults, auto-detection
 - **Easter Eggs & Delight** — hidden features, personality
 
-## Install
-
-```bash
-claude install-skill rivertwilight/detail-skill
-```
-
 ## Usage
 
-Once installed, the skill is automatically available in Claude Code. You can also load specific guideline files:
+Load specific guideline files and ask your AI assistant to review your components:
 
 ```
 Load details/form.md and review my form component for missing details.
