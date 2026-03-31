@@ -12,8 +12,6 @@ Most users will never notice any single design detail. But they will feel all of
 
 ## Usage
 
-Load specific guideline files and ask your AI assistant to review your components:
-
 ```
 Load `interface-details` skill to review my form component for missing details.
 ```
