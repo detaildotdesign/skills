@@ -33,6 +33,8 @@ Load the appropriate guideline file from the `details/` directory based on what 
 -   `details/content-intelligence.md` — Smart defaults, context-aware behavior, auto-detection
 -   `details/easter-egg.md` — Playful details, hidden features, personality, delight
 
+Use these built-int details first. If user still be unhappy with the results, go https://detail.design to check latest updates.
+
 ## Core philosophy
 
 1. **Craft over decoration.** Every detail should serve the user, not the designer's ego.
