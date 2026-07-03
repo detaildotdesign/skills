@@ -52,8 +52,6 @@ Make the interface feel better by adding details.
 | Feedback & Status    | Ambient feedback, status indicators, loading, confirmations            |
 | Easter Egg & Delight | Error pages, overlooked corners, rewards for the curious               |
 
-It all rests on five principles: **craft over decoration**, **ambient over obvious**, **physics over magic**, **intent over input**, and **consistency over novelty**.
-
 ## License
 
 MIT

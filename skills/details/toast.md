@@ -86,17 +86,6 @@ Gate the close button on a promotional banner or "What's New" popup behind a sho
 
 Scan user-generated content for predictable mistakes (missing unsubscribe link, broken URL, empty required field) and surface a warning before the irreversible action fires. Catching the error pre-send is cheaper than an apology email after.
 
-```js
-function preflight(email) {
-	const warnings = [];
-	if (!email.body.includes("unsubscribe"))
-		warnings.push("No unsubscribe link");
-	if (/href="(?!https?:)/.test(email.body))
-		warnings.push("Broken or relative URL");
-	return warnings; // block send while non-empty
-}
-```
-
 ### 9. Shake on disabled click
 
 A click on a disabled control must acknowledge the input. Silent no-ops read as a broken UI; a brief shake says "heard you, not yet" without an intrusive alert.
