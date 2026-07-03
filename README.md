@@ -36,21 +36,21 @@ Make the interface feel better by adding details.
 
 ## What's inside
 
-11 category chapters, each a set of numbered, observable rules with code examples:
+11 category chapters — 107 numbered, observable rules with code examples:
 
-| Chapter              | Covers                                                     |
-| -------------------- | ---------------------------------------------------------- |
-| Form                 | Inputs, keyboards, labels, date pickers, paste, IME        |
-| Motion               | Transitions, hover states, micro-animations, layout shifts |
-| Button & Control     | Hit areas, cursors, click guards, shortcuts                |
-| Typography           | Text rendering, overflow, truncation, formatting           |
-| Scroll               | Anchoring, overscroll, scrollbars, edge fades              |
-| Accessibility        | Focus rings, keyboard, screen readers, find-in-page        |
-| Layout               | Border radius, optical alignment, media surfaces           |
-| Browser & Platform   | Favicons, theme colors, URLs, meta tags, PWA               |
-| Content Intelligence | Smart defaults, context-aware behavior, auto-detection     |
-| Feedback & Status    | Toasts, notifications, status, loading states              |
-| Easter Egg & Delight | Playful details, hidden features, personality              |
+| Chapter              | Covers                                                                 |
+| -------------------- | ---------------------------------------------------------------------- |
+| Form                 | Inputs, labels, IME composition, paste, natural-language dates         |
+| Motion               | Transitions, hover states, micro-animations, layout choreography       |
+| Button & Control     | Hit areas, cursor semantics, click guards, keyboard shortcuts          |
+| Typography           | Text rendering, overflow, truncation, wording, inline previews         |
+| Scroll               | Anchoring, overscroll, navigation shortcuts, scrollbars, edge fades    |
+| Accessibility        | Focus management, keyboard operability, screen readers, find-in-page   |
+| Layout               | Border radius math, optical alignment, media surfaces, adaptive chrome |
+| Browser & Platform   | Favicons, theme colors, URLs, link previews, PWA                       |
+| Content Intelligence | Smart defaults, context-aware behavior, auto-detection                 |
+| Feedback & Status    | Ambient feedback, status indicators, loading, confirmations            |
+| Easter Egg & Delight | Error pages, overlooked corners, rewards for the curious               |
 
 It all rests on five principles: **craft over decoration**, **ambient over obvious**, **physics over magic**, **intent over input**, and **consistency over novelty**.
 
