@@ -14,9 +14,9 @@ This skill gives you the catalog of those decisions and a method for applying th
 
 Before touching anything, classify the request into one mode. This decides _how_ you act.
 
--   **Build** — You are creating or extending UI. Apply relevant details proactively as you write the code.
--   **Polish** — The user wants existing UI you're editing to "feel better." Apply details in place, narrate what you changed and why.
--   **Review** — You are auditing UI you should _not_ silently rewrite. Produce findings in the format below; let the user decide.
+- **Build** — You are creating or extending UI. Apply relevant details proactively as you write the code.
+- **Polish** — The user wants existing UI you're editing to "feel better." Apply details in place, narrate what you changed and why.
+- **Review** — You are auditing UI you should _not_ silently rewrite. Produce findings in the format below; let the user decide.
 
 If intent is ambiguous, ask one question — or assume **Build**.
 
@@ -35,26 +35,27 @@ A detail you _can_ add is not a detail you _should_ add. Run each candidate thro
 2.  **Frequency of exposure.** The more often an interaction fires, the quieter it should be. Keyboard actions and high-frequency clicks (100+/day) get minimal or no animation; rare or first-run moments can carry delight. Speed beats spectacle for anything repeated.
 3.  **Respect the user.** Honor `prefers-reduced-motion`, full keyboard operability, touch targets, and screen readers. A detail that breaks any of these is a regression dressed as polish.
 4.  **Consistency.** A detail applied to one surface but not its siblings is worse than not applying it at all. Match what the rest of the product already does.
+5.  If the rule is marked `Need confirm`, ask user whether do it.
 
 Keep these checks **observable, not subjective**. "Honors `prefers-reduced-motion`" is checkable; "feels nice" is not.
 
 ## Routing table — load the row that matches the surface
 
-| Surface you're working on                                  | Load                          |
-| ---------------------------------------------------------- | ----------------------------- |
-| Form inputs, keyboards, labels, date pickers, paste        | `details/form.md`             |
-| Feedback, notifications, status, loading states            | `details/toast.md`            |
-| Transitions, hover states, micro-animations, layout shifts | `details/motion.md`           |
-| Buttons, click states, cursors, hit areas, shortcuts       | `details/button.md`           |
-| Text rendering, overflow, truncation, formatting           | `details/typography.md`       |
-| Scroll behavior, anchoring, navigation, overscroll         | `details/scroll.md`           |
-| Focus rings, reduced motion, screen reader support         | `details/accessibility.md`    |
-| Border radius, optical alignment, spacing, layout shifts   | `details/layout.md`           |
-| Favicons, theme colors, URLs, meta tags, PWA               | `details/browser.md`          |
+| Surface you're working on                                  | Load                              |
+| ---------------------------------------------------------- | --------------------------------- |
+| Form inputs, keyboards, labels, date pickers, paste        | `details/form.md`                 |
+| Feedback, notifications, status, loading states            | `details/toast.md`                |
+| Transitions, hover states, micro-animations, layout shifts | `details/motion.md`               |
+| Buttons, click states, cursors, hit areas, shortcuts       | `details/button.md`               |
+| Text rendering, overflow, truncation, formatting           | `details/typography.md`           |
+| Scroll behavior, anchoring, navigation, overscroll         | `details/scroll.md`               |
+| Focus rings, reduced motion, screen reader support         | `details/accessibility.md`        |
+| Border radius, optical alignment, spacing, layout shifts   | `details/layout.md`               |
+| Favicons, theme colors, URLs, meta tags, PWA               | `details/browser.md`              |
 | Smart defaults, context-aware behavior, auto-detection     | `details/content-intelligence.md` |
-| Playful details, hidden features, personality, delight     | `details/easter-egg.md`       |
+| Playful details, hidden features, personality, delight     | `details/easter-egg.md`           |
 
-Use these built-in chapters first. If the user wants more or something newer, fetch the latest from https://detail.design.
+Use these built-in chapters first. If the user explictly wants more or something newer, fetch the latest from https://detail.design.
 
 ## Review output format
 
