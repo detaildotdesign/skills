@@ -29,29 +29,9 @@ Per Fitts's Law, acquiring a target is faster the bigger it is — so let the bu
 
 Default to the arrow cursor everywhere, then opt into `pointer` only where a click takes the user to a new page. The cursor then reliably predicts whether a click navigates or just acts in place.
 
-```css
-a {
-	cursor: pointer;
-} /* goes somewhere */
-button {
-	cursor: default;
-} /* acts in place */
-```
-
 ## 5. Use a contextual cursor over special targets
 
 Swap to a context-specific cursor when hovering an element with a distinct interaction model — e.g. Linear shows a help cursor over an author/people section so the cursor itself signals "more info here, not a link."
-
-```css
-.author-section:hover {
-	cursor: help;
-}
-.user-avatar:hover {
-	cursor:
-		url("/cursors/avatar.svg") 4 4,
-		pointer;
-}
-```
 
 ## 6. Offer single-key shortcuts in power-user tools
 
@@ -107,28 +87,34 @@ function onTabPress(tab) {
 ```
 
 ## 14. Prevent accidental swipe-back
+
 Set `overscroll-behavior-x: none` on any horizontally scrollable UI. Without it, a horizontal swipe past the edge triggers the browser's built-in back gesture and destroys page state.
+
 ```css
 .carousel {
-  overflow-x: auto;
-  overscroll-behavior-x: none;
+	overflow-x: auto;
+	overscroll-behavior-x: none;
 }
 ```
 
 ## 15. Enable overscroll in nested scrollers
+
 Let inner scrollable containers rubber-band at their boundaries so an edge reads as "end of this region," not a dead surface — now supported across Chrome, WebKit, and Firefox. Use `overscroll-behavior: contain` to give the inner scroller its own bounce without leaking scroll to the parent.
+
 ```css
 .panel {
-  overflow-y: auto;
-  overscroll-behavior: contain;
+	overflow-y: auto;
+	overscroll-behavior: contain;
 }
 ```
 
 ## 16. Provide a scroll landmark back to the top
+
 Long pages need a discoverable, persistent way back to the top that also remembers where the user was. Platform shortcuts (iOS status-bar tap, Home key) are device-specific, undiscoverable, and can't return to the original position.
+
 ```jsx
-<button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-  ↑ Top
+<button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+	↑ Top
 </button>
 ```
 
@@ -233,21 +219,16 @@ Resolve what the user means, not just what they typed: "change my password" must
 When a user says "wake me at 9am tomorrow" at 1am, "tomorrow" means after their next sleep — eight hours out, not 32. The human day flips at sleep, not midnight. When the interpretation is genuinely ambiguous, ask which day rather than guessing wrong.
 
 ## 33. Anchor list scrolling in three phases
+
 In a long list with arrow-key navigation, first move only the highlight; once it reaches ~70% down the viewport, lock it and scroll the list beneath it; release the lock at the top and bottom so the user lands on the final item. A fixed visual anchor keeps the eye still while the data moves. Keep any input field anchored too — center the whole panel and its position will drift as the list height changes. Belongs in every CMDK-style menu.
 
 ## 34. Keep the active view's entry visible
+
 When a detail view opens from a list or sidebar, keep its originating row visible and highlighted. The persistent link between entry point and content prevents spatial disorientation when the user navigates back.
 
 ## 35. Highlight the ToC by visibility, not last anchor
+
 Activate table-of-contents items based on which sections are currently in the viewport, not just the last anchor crossed. Multiple items can be active at once, turning the ToC into a true minimap; transition the highlight bar smoothly rather than letting it stagger between items.
-```js
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    tocLink(e.target.id).classList.toggle('active', e.isIntersecting);
-  }
-}, { rootMargin: '0px 0px -60% 0px' });
-sections.forEach((s) => io.observe(s));
-```
 
 ## 36. Reflect live status in the favicon
 

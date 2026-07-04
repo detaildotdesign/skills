@@ -71,12 +71,6 @@ A fade-out mask on a scroll container must not overlap the scrollbar track. Inse
 
 The address bar shouldn't be a white strip. Match `<meta name="theme-color">` to the current background so the browser chrome merges with the app for a native-like, immersive feel. Update it dynamically on scroll, theme, or route changes — not just at load.
 
-```js
-document
-	.querySelector('meta[name="theme-color"]')
-	.setAttribute("content", getComputedStyle(document.body).backgroundColor);
-```
-
 ## 9. Ship light/dark favicon variants
 
 Serve separate favicon SVGs gated by `prefers-color-scheme` so the icon never clashes with the OS tab bar in either mode.
