@@ -23,7 +23,7 @@ The agent should use it when you ask about "adding details" or "make the interfa
 Example prompts:
 
 ```
-Use `interface-details` skill to review my form component for missing details.
+Use `interface-details` skill to review my project for missing details.
 ```
 
 ```
