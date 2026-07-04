@@ -1,8 +1,8 @@
 # Accessibility Details
 
-Focus management, keyboard operability, screen reader semantics, find-in-page, robust links, and inclusive input — the details that make an interface usable by keyboard, assistive tech, and motor-impaired users.
+Keyboard support, focus behavior, screen-reader semantics, touch targets, reduced motion, and inclusive input paths.
 
-**Skip when:** Rarely skippable — these are baseline obligations. But don't reach for ARIA where native HTML already conveys the role and state: a `<button>` already announces itself, `<details>`/`<summary>` already handles disclosure, and adding `role="button"` to a `<div>` is a regression, not an upgrade.
+**Skip when:** The rule would weaken native semantics, keyboard access, visible focus, text clarity, or assistive technology behavior. Accessibility details are baseline quality, not optional polish.
 
 ## 1. Keep a visible focus ring on every focusable element
 The focus ring is the only landmark keyboard users have to know which element Enter will activate. `outline: none` with no replacement strands them. Leave the default as a floor; you can still customize color, offset, and radius for a focus ring that fits the design without trading away affordance.
@@ -97,4 +97,29 @@ document.addEventListener("keydown", (e) => {
 Calendar pickers and complex widgets are hard to operate with a screen reader or keyboard alone. Accept plain text ("next friday", "in 3 days") as a parallel input path so the feature stays reachable without the widget.
 ```html
 <input type="text" placeholder="e.g. next friday" aria-label="Due date — type a date or phrase">
+```
+
+## 11. Link every label to its input
+
+Wire `<label for="id">` to the input's `id` so clicking the label focuses the control. HTML does this natively — don't break it. It enlarges the hit target and is required for screen-reader association.
+
+```html
+<label for="email">Email</label> <input id="email" type="email" />
+```
+
+## 12. Make every interaction keyboard-reachable
+
+Every control must be focusable and operable without a pointer: Tab reaches it, Enter/Space activates it, Esc dismisses. Verify by unplugging the mouse and completing the whole form. Custom widgets need `tabindex` and key handlers.
+
+## 13. Respect CJK composition state
+
+Track `compositionstart`/`compositionend` and ignore Enter or single-letter shortcuts while composing. IME methods (Pinyin, Romaji) pre-fill letters and use Enter to confirm a pending candidate — acting on those keydowns submits or filters mid-word for CJK users.
+
+```js
+let composing = false;
+input.addEventListener("compositionstart", () => (composing = true));
+input.addEventListener("compositionend", () => (composing = false));
+input.addEventListener("keydown", (e) => {
+	if (e.key === "Enter" && !composing) submit();
+});
 ```

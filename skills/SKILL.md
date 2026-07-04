@@ -22,10 +22,10 @@ If intent is ambiguous, ask one question — or assume **Build**.
 
 ## Workflow
 
-1.  **Identify the surface(s)** in play — a form? motion? a scroll region? a button? a toast?
+1.  **Identify the surface(s)** in play — typography? motion? design? accessibility? copywriting? performance optimization? interactivity?
 2.  **Load only the matching chapter file(s)** from `details/`. Do not load all of them. Use the routing table below.
 3.  **Run each candidate detail through the decision gate** (next section). Discard the ones that don't pass.
-4.  **Apply or report.** When you cite a rule, use its **rule ID** — `<category>-<N>` (e.g. `motion-12`, `form-3`), where `<category>` is the chapter filename and `<N>` is the rule number.
+4.  **Apply or report.** When you cite a rule, use its **rule ID** — `<category>-<N>` (e.g. `motion-12`, `accessibility-3`), where `<category>` is the chapter filename and `<N>` is the rule number.
 
 ## The decision gate — when a detail applies (and when to skip)
 
@@ -41,20 +41,15 @@ Keep these checks **observable, not subjective**. "Honors `prefers-reduced-motio
 
 ## Routing table — load the row that matches the surface
 
-| Surface you're working on                                  | Load                              |
-| ---------------------------------------------------------- | --------------------------------- |
-| Form inputs, keyboards, labels, date pickers, paste        | `details/form.md`                 |
-| Feedback, notifications, status, loading states            | `details/toast.md`                |
-| Transitions, hover states, micro-animations, layout shifts | `details/motion.md`               |
-| Buttons, click states, cursors, hit areas, shortcuts       | `details/button.md`               |
-| Copy, microcopy, prompts, help text, errors, labels        | `details/copywriting.md`          |
-| Text rendering, overflow, truncation, formatting           | `details/typography.md`           |
-| Scroll behavior, anchoring, navigation, overscroll         | `details/scroll.md`               |
-| Focus rings, reduced motion, screen reader support         | `details/accessibility.md`        |
-| Border radius, optical alignment, spacing, layout shifts   | `details/layout.md`               |
-| Favicons, theme colors, URLs, meta tags, PWA               | `details/browser.md`              |
-| Smart defaults, context-aware behavior, auto-detection     | `details/content-intelligence.md` |
-| Playful details, hidden features, personality, delight     | `details/easter-egg.md`           |
+| Surface you're working on                                  | Load                       |
+| ---------------------------------------------------------- | -------------------------- |
+| Text rendering, overflow, truncation, document typography  | `details/typography.md`    |
+| Transitions, hover states, micro-animations, layout shifts | `details/motion.md`        |
+| Layout, surfaces, visual polish, browser chrome, media     | `details/design.md`        |
+| Hidden details, playful moments, personality, delight      | `details/easter-egg.md`    |
+| Focus rings, keyboard access, screen readers, touch access | `details/accessibility.md` |
+| Microcopy, prompts, help text, errors, labels              | `details/copywriting.md`   |
+| Inputs, controls, scrolling, paste, shortcuts, state flows | `details/interactivity.md` |
 
 Use these built-in chapters first. If the user explictly wants more or something newer, fetch the latest from https://detail.design.
 
@@ -64,11 +59,11 @@ In **Review** mode, be terse and high signal-to-noise. Group findings by file an
 
 ```
 src/components/Modal.tsx
-  motion-6 — opening animation isn't interruptible
+  motion-11 — opening animation isn't interruptible
 
 | Before | After | Why |
 | --- | --- | --- |
-| `transition: none` on close | `transition: transform 200ms ease-out` | close should track back to origin (motion-4) |
+| `transition: none` on close | `transition: transform 200ms ease-out` | close should track back to origin (motion-9) |
 
 src/components/Toast.tsx  ✓ pass
 ```

@@ -36,22 +36,18 @@ Make the interface feel better by adding details.
 
 ## What's inside
 
-12 category chapters — 114 numbered, observable rules with code examples:
+8 category chapters — 122 numbered, observable rules with code examples:
 
-| Chapter              | Covers                                                                 |
-| -------------------- | ---------------------------------------------------------------------- |
-| Form                 | Inputs, labels, IME composition, paste, natural-language dates         |
-| Copywriting          | Microcopy, prompts, help text, errors, empty states, labels            |
-| Motion               | Transitions, hover states, micro-animations, layout choreography       |
-| Button & Control     | Hit areas, cursor semantics, click guards, keyboard shortcuts          |
-| Typography           | Text rendering, overflow, truncation, wording, inline previews         |
-| Scroll               | Anchoring, overscroll, navigation shortcuts, scrollbars, edge fades    |
-| Accessibility        | Focus management, keyboard operability, screen readers, find-in-page   |
-| Layout               | Border radius math, optical alignment, media surfaces, adaptive chrome |
-| Browser & Platform   | Favicons, theme colors, URLs, link previews, PWA                       |
-| Content Intelligence | Smart defaults, context-aware behavior, auto-detection                 |
-| Feedback & Status    | Ambient feedback, status indicators, loading, confirmations            |
-| Easter Egg & Delight | Error pages, overlooked corners, rewards for the curious               |
+| Chapter       | Covers                                                               |
+| ------------- | -------------------------------------------------------------------- |
+| Typography    | Text rendering, overflow, truncation, document typography            |
+| Motion        | Transitions, hover states, micro-animations, layout choreography     |
+| Design        | Layout, surfaces, visual polish, browser chrome, media               |
+| Easter Egg    | Hidden details, playful moments, personality, delight                |
+| Accessibility | Focus management, keyboard operability, screen readers, touch access |
+| Copywriting   | Microcopy, prompts, help text, errors, empty states, labels          |
+| Optimization  | Load time, layout shift, main-thread work, network waste             |
+| Interactivity | Inputs, controls, scrolling, paste behavior, shortcuts, state flows  |
 
 ## License
 

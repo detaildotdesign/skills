@@ -40,6 +40,22 @@ Phrase validation around the rule the value must satisfy, not the user's mistake
 
 An empty state should name what is absent and offer the exact next action when one exists. Avoid generic "Nothing here" copy unless there is no safe action to suggest.
 
-## 10. Pluralize labels instead of using shortcuts
+## 10. Cut filler and hype
 
-Interpolate count-aware copy rather than showing `item(s)` or a stale plural. The small grammatical match makes counts easier to scan and avoids copy that feels machine-generated.
+Remove words that do not change the user's action or understanding: "just", "simply", "actually", "seamlessly", "powerful", "robust", and "leverage". Plain product copy is easier to trust than promotional language in a working interface.
+
+## 11. Write a thoughtful "What's New" message
+
+Even a changelog few people read deserves real copy. Skip the bare "Bug fixes and improvements" — a warm, specific line acknowledges the quiet work and makes the release feel cared-for.
+
+## 12. Use human-readable IDs
+
+For user-visible identifiers, generate readable project-scoped IDs like `DTD-123` instead of UUIDs or raw auto-increments — they're easy to remember, say aloud, and reference in conversation. For IDs users never see, like a database index, random strings are fine.
+
+## 13. Tailor CTA copy to the visitor's time
+
+Phrase the call to action against the current moment — "Start Building Tonight," "Try Better Reading This Weekend," "Send a Gift by Christmas." The same button feels written for this visitor, right now.
+
+## 14. Pluralize labels to match the count
+
+"1 items" reads as a bug. Switch the noun on the count so singular and plural always agree, treating microcopy as a first-class detail.

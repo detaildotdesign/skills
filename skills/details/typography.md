@@ -1,8 +1,8 @@
 # Typography Details
 
-How text renders, overflows, truncates, and reads correctly across UI surfaces — plus the wording and inline previews that make strings legible at a glance.
+Text rendering, truncation, inline formatting, document typography, and typographic polish that make content easier to read.
 
-**Skip when:** Body copy and prose blocks rarely need overflow masks or path truncation — let long text wrap naturally. Don't reach for `text-box-trim` on multi-line paragraphs where line-height already governs rhythm.
+**Skip when:** Content is purely structural or machine-readable. Don't typographically rewrite code, identifiers, API fields, or exact user input.
 
 ## 1. Trim text box spacing
 
@@ -65,11 +65,5 @@ A hex string like `#3B82F6` is machine-readable but not human-readable. Render a
 }
 ```
 
-## 7. Pluralize labels to match the count
-
-"1 items" reads as a bug. Switch the noun on the count so singular and plural always agree, treating microcopy as a first-class detail.
-
-```js
-const label = (n, noun) => `${n} ${noun}${n === 1 ? "" : "s"}`;
-// label(1, "item") -> "1 item"; label(3, "item") -> "3 items"
-```
+## 7. Give generated documents real typography
+Invoices, receipts, and exported PDFs default to boring system layouts. Treat them as a branded surface: deliberate type scale, aligned columns, and spacing that matches the product, so the document reads as crafted rather than auto-generated.

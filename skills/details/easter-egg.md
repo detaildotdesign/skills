@@ -1,8 +1,8 @@
-# Easter Egg & Delight Details
+# Easter Egg Details
 
-A small, restrained set of delight principles — care for overlooked surfaces and rewards for the curious, not gimmicks.
+Small moments of delight, hidden details, and overlooked surfaces that reward curiosity without blocking the main task.
 
-**Skip when:** The product is high-stakes or serious (payments, account deletion, medical, legal, error recovery) where the user needs clarity, not whimsy. Delight is the last 1% — never spend it before the core experience is solid, and never at the cost of maintenance the team can't sustain.
+**Skip when:** The user is trying to recover from a serious failure, finish urgent work, or operate in a regulated/high-stakes flow. Delight must never obscure consequence or recovery.
 
 ## 1. Turn error and 404 pages into a moment of delight
 A missing page or error is a dead end by default. Treat it as a hidden room of your site rather than a void: add warmth and light interactivity so the few who land there leave less frustrated, not more. It's the same care you'd give the corners of a house guests never see.
@@ -22,4 +22,13 @@ Where a product generates a throwaway string — an invite code, a share link �
 const palette = { tomato: "#FF6347", azure: "#007FFF", amber: "#FFBF00" };
 const name = pickRandomKey(palette);
 const code = `${name}-${palette[name].slice(1)}`; // "azure-007FFF"
+```
+
+## 6. Give folders semantic icons by name (Need confirm)
+
+Assign recognizable icons by naming convention — "Documents", "Developer", "Downloads" — so users scan instead of read. macOS does this automatically the moment a folder is named.
+
+```js
+const ICONS = { Documents: "📄", Developer: "⌨️", Downloads: "⬇️" };
+const icon = ICONS[folder.name] ?? "📁";
 ```
