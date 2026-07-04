@@ -50,15 +50,6 @@ Almost anything on the page can respond to light/dark mode — not just colors. 
 
 Encode filters, search query, sort, view mode, selection, and even scroll position as URL params. The view becomes shareable, bookmarkable, and survives back-button and refresh — a saved URL is a snapshot of a configuration, not just a destination. For one-way data it also avoids a database round-trip entirely.
 
-```js
-const params = new URLSearchParams({ q: query, sort, view });
-history.replaceState(null, "", `?${params}`);
-```
-
-## 6. Serve from the apex domain
-
-Drop the `www.` subdomain and serve from the bare apex. Modern DNS, CDNs, and HTTP/2/3 handle apex domains fine; the prefix is legacy noise, and cleaner URLs are easier to type, share, and remember.
-
-## 7. Use PNG or JPEG for Open Graph images
+## 6. Use PNG or JPEG for Open Graph images
 
 Render OG images as PNG or JPEG, never WebP — Facebook, X, LinkedIn, and iMessage have inconsistent or no WebP preview support, so it silently fails to render. Keep key content (text, logos) inside a ~1000×500px center safe zone to survive cropping across platforms.
