@@ -1,6 +1,6 @@
 # Interface Details Skill
 
-A skill that helps to bring crafted micro-interactions, extra considerations, and thoughtful details to interfaces — based on 120+ real-world examples curated on [detail.design](https://detail.design).
+A skill that helps to bring crafted micro-interactions, extra considerations, and thoughtful details to interfaces, based on 120+ real-world examples curated on [detail.design](https://detail.design).
 
 Most users will never notice any single design detail. But they will feel all of them together. This skill encodes that craft into actionable rules an AI coding assistant can apply while building UI.
 
@@ -23,7 +23,7 @@ The agent should use it when you ask about "adding details" or "make the interfa
 Example prompts:
 
 ```
-Load `interface-details` skill to review my form component for missing details.
+Use `interface-details` skill to review my form component for missing details.
 ```
 
 ```
@@ -35,8 +35,6 @@ Make the interface feel better by adding details.
 ```
 
 ## What's inside
-
-8 category chapters — 122 numbered, observable rules with code examples:
 
 | Chapter       | Covers                                                               |
 | ------------- | -------------------------------------------------------------------- |
