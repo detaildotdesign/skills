@@ -47,6 +47,7 @@ Keep these checks **observable, not subjective**. "Honors `prefers-reduced-motio
 | Feedback, notifications, status, loading states            | `details/toast.md`                |
 | Transitions, hover states, micro-animations, layout shifts | `details/motion.md`               |
 | Buttons, click states, cursors, hit areas, shortcuts       | `details/button.md`               |
+| Copy, microcopy, prompts, help text, errors, labels        | `details/copywriting.md`          |
 | Text rendering, overflow, truncation, formatting           | `details/typography.md`           |
 | Scroll behavior, anchoring, navigation, overscroll         | `details/scroll.md`               |
 | Focus rings, reduced motion, screen reader support         | `details/accessibility.md`        |

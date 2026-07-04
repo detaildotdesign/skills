@@ -36,11 +36,12 @@ Make the interface feel better by adding details.
 
 ## What's inside
 
-11 category chapters — 107 numbered, observable rules with code examples:
+12 category chapters — 114 numbered, observable rules with code examples:
 
 | Chapter              | Covers                                                                 |
 | -------------------- | ---------------------------------------------------------------------- |
 | Form                 | Inputs, labels, IME composition, paste, natural-language dates         |
+| Copywriting          | Microcopy, prompts, help text, errors, empty states, labels            |
 | Motion               | Transitions, hover states, micro-animations, layout choreography       |
 | Button & Control     | Hit areas, cursor semantics, click guards, keyboard shortcuts          |
 | Typography           | Text rendering, overflow, truncation, wording, inline previews         |
